@@ -17,7 +17,7 @@ export class LanguageSwitcher {
   languages = ['en', 'es'];
 
   constructor(private translate: TranslateService) {
-    this.currentLang = this.translate.currentLang || 'en';
+    this.currentLang = this.translate.currentLang() || 'en';
   }
 
   useLanguage(language: string): Observable<any> {
